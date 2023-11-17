@@ -1,46 +1,22 @@
-import { Link } from 'react-router-dom';
 import styled from '@emotion/styled';
 
 export const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 500px;
-`;
-export const Block = styled.div`
-  text-align: center;
-`;
-export const Title = styled.h1`
-  color: #ffffff;
-  text-shadow:
-    0 0 5px #00baff,
-    0 0 10px #00baff,
-    0 0 20px #00baff,
-    0 0 40px #00baff,
-    0 0 80px #00baff;
+  padding: 100px 128px;
 `;
 
-export const StyledLink = styled(Link)`
+export const Title = styled.h1`
+  margin: 0;
+  margin-right: 10px;
+`;
+
+export const List = styled.ul`
+  display: flex;
+  gap: 30px;
   padding: 8px 16px;
-  color: #ffffff; /* White text color */
-  text-shadow:
-    0 0 5px #00baff,
-    0 0 10px #00baff,
-    0 0 20px #00baff,
-    0 0 40px #00baff,
-    0 0 80px #00baff;
-  transition:
-    color 0.3s,
-    text-shadow 0.3s;
-  display: block;
-  &:hover,
-  &:focus {
-    color: #00baff; /* Blue text color on hover/focus */
-    text-shadow:
-      0 0 5px #00baff,
-      0 0 10px #00baff,
-      0 0 20px #00baff,
-      0 0 40px #00baff,
-      0 0 80px #00baff;
-  }
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
 `;
