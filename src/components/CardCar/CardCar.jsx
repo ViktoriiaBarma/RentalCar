@@ -7,7 +7,6 @@ import {
   Details,
 } from './CardCar.styled';
 const CardCar = ({ car }) => {
-  console.log(car);
   return (
     <>
       <ListItem>
@@ -20,18 +19,16 @@ const CardCar = ({ car }) => {
             <p>{car.rentalPrice}</p>
           </Price>
           <Details>
-            <li>Kiev</li>
-            <li>Ukraine</li>
+            <li>{car.address.split(',')[1]}</li>
+            <li>{car.address.split(',')[2]}</li>
             <li>{car.rentalCompany}</li>
             <li>{car.type}</li>
             <li>{car.model}</li>
             <li>{car.id}</li>
-            <li>{car.functionalities[0]}</li>
+            <li>{car.functionalities[3]}</li>
           </Details>
         </Descr>
-        <div>
-          <Btn type="button">Learn More</Btn>
-        </div>
+        <Btn type="button">Learn More</Btn>
       </ListItem>
     </>
   );

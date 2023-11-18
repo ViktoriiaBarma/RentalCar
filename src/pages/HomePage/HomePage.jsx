@@ -8,9 +8,9 @@ const HomePage = () => {
       {/* <Title>Home Page</Title> */}
       <List>
         {cars.map((car) => (
-          <li key={car.id}>
-            <CardCar car={car} />
-          </li>
+          // <li key={car.id}>
+          <CardCar key={car.id} car={car}  />
+          // </li>
         ))}
       </List>
     </Container>

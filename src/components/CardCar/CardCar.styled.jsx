@@ -1,9 +1,9 @@
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 
 export const ListItem = styled.li`
   width: 274px;
+  height: 426px;
   border-radius: 16px;
-  border: 2px solid rgba(185, 228, 201, 0.5);
   overflow: hidden;
   box-shadow:
     rgba(0, 0, 0, 0.2) 0px 2px 4px -1px,
@@ -21,11 +21,12 @@ export const ListItem = styled.li`
 
 export const Btn = styled.button`
   border-radius: 12px;
-  border: 1px solid transparent;
-  padding: 12px 98px;
+  border: 0.5px solid transparent;
+  padding: 12px 99.5px;
   color: #fff;
   font-size: 14px;
   font-weight: 500;
+  line-height: 1.3;
   font-family: inherit;
   background-color: #3470ff;
   cursor: pointer;
@@ -35,14 +36,16 @@ export const Btn = styled.button`
   }
 `;
 export const Picture = styled.img`
-  width: 100%;
+  width: 274px;
+  border-radius: 14px;
+  object-position: center;
+  margin-bottom: 14px;
   height: 268px;
   object-fit: cover;
-  padding-bottom: 14px;
 `;
 
 export const Descr = styled.div`
-  padding-bottom: 28px;
+  margin-bottom: 28px;
 `;
 
 export const Price = styled.div`
@@ -51,10 +54,11 @@ export const Price = styled.div`
   padding: 0 4px 8px;
   font-size: 16px;
 `;
-export const Details = styled.div`
+export const Details = styled.ul`
   display: flex;
   flex-wrap: wrap;
-  column-gap: 12px;
+  padding: 0 4px;
+  gap: 5px;
   align-items: center;
   font-size: 12px;
 `;

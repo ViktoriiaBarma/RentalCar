@@ -8,9 +8,7 @@ const CatalogPage = () => {
       {/* <Title>Catalog Page</Title> */}
       <List>
         {cars.map((car) => (
-          <li key={car.id}>
-            <CardCar car={car} />
-          </li>
+            <CardCar key={car.id} car={car} />
         ))}
       </List>
     </Container>
