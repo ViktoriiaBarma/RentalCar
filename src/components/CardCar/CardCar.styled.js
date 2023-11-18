@@ -44,3 +44,17 @@ export const Picture = styled.img`
 export const Descr = styled.div`
   padding-bottom: 28px;
 `;
+
+export const Price = styled.div`
+  display: flex;
+  justify-content: space-between;
+  padding: 0 4px 8px;
+  font-size: 16px;
+`;
+export const Details = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 12px;
+  align-items: center;
+  font-size: 12px;
+`;
