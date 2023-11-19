@@ -9,7 +9,9 @@ const HomePage = () => {
     <Container>
       <Title>Let`s arrange an interesting trip</Title>
       <Btn>
-        <Link to="/catalog">Let`s go</Link>
+        <Link style={{ textDecoration: 'none', color: 'white' }} to="/catalog">
+          Let`s go
+        </Link>
       </Btn>
     </Container>
   );

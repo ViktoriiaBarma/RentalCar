@@ -73,10 +73,6 @@ export const Model = styled.span`
 export const Details = styled.ul`
   display: flex;
   flex-wrap: wrap;
-  // padding: 0 4px;
-  // gap: 5px;
-  // align-items: center;
-  // font-size: 12px;
   color: #121417;
   opacity: 50%;
   font-size: 12px;
@@ -84,11 +80,6 @@ export const Details = styled.ul`
   height: 40px;
   text-overflow: ellipsis;
   overflow: hidden;
-
-  &span {
-    border-right: 1px solid #12141732;
-    margin-left: 6px;
-    margin-right: 6px;
   }
 `;
 

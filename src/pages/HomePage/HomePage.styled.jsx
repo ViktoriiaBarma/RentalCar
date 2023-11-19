@@ -18,31 +18,14 @@ export const Container = styled.div`
   width: 100%;
   height: 100hv;
 
-  margin-left: auto;
-  margin-right: auto;
-  text-align: left;
-
   background-image: url(${Car});
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  padding: 300px;
+  padding-top: 100px;
+  padding-bottom: 500px;
+  padding-left: 50px;
 `;
-// export const PictureWrapper = styled.div`
-//   position: relative;
-//   width: 100%;
-//   height: 100hv;
-//   border-radius: 14px;
-//   overflow: hidden;
-//   margin-bottom: 14px;
-// `;
-
-// export const Picture = styled.img`
-//   width: 100%;
-//   height: 100hv;
-//   display: block;
-//   object-fit: cover;
-// `;
 
 export const Btn = styled.button`
   border-radius: 12px;
