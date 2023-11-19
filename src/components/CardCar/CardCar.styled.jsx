@@ -35,12 +35,19 @@ export const Btn = styled.button`
     background-color: #0b44cd;
   }
 `;
-export const Picture = styled.img`
+export const PictureWrapper = styled.div`
+  position: relative;
   width: 274px;
-  border-radius: 14px;
-  object-position: center;
-  margin-bottom: 14px;
   height: 268px;
+  border-radius: 14px;
+  overflow: hidden;
+  margin-bottom: 14px;
+`;
+
+export const Picture = styled.img`
+  width: 100%;
+  height: 268px;
+  display: block;
   object-fit: cover;
 `;
 
@@ -51,14 +58,42 @@ export const Descr = styled.div`
 export const Price = styled.div`
   display: flex;
   justify-content: space-between;
-  padding: 0 4px 8px;
   font-size: 16px;
+  color: #121417;
+  font-weight: 500;
+  line-height: 24px;
+  height: 24px;
+  overflow: hidden;
+  margin-bottom: 8px;
 `;
+export const Model = styled.span`
+  color: #3470ff;
+`;
+
 export const Details = styled.ul`
   display: flex;
   flex-wrap: wrap;
-  padding: 0 4px;
-  gap: 5px;
-  align-items: center;
+  // padding: 0 4px;
+  // gap: 5px;
+  // align-items: center;
+  // font-size: 12px;
+  color: #121417;
+  opacity: 50%;
   font-size: 12px;
+  line-height: 18px;
+  height: 40px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+
+  &span {
+    border-right: 1px solid #12141732;
+    margin-left: 6px;
+    margin-right: 6px;
+  }
+`;
+
+export const Line = styled.span`
+  border-right: 1px solid #12141732;
+  margin-left: 6px;
+  margin-right: 6px;
 `;

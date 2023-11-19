@@ -1,14 +1,16 @@
 import { Container, List } from './CatalogPage.styled';
 import CardCar from '../../components/CardCar/CardCar';
+import Filter from '../../components/Filter/Filter';
 import cars from '../../advert.json';
 
 const CatalogPage = () => {
   return (
     <Container>
+      <Filter />
       {/* <Title>Catalog Page</Title> */}
       <List>
         {cars.map((car) => (
-            <CardCar key={car.id} car={car} />
+          <CardCar key={car.id} car={car} />
         ))}
       </List>
     </Container>

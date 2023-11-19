@@ -1,18 +1,16 @@
-import { Container, List } from './HomePage.styled';
-import CardCar from '../../components/CardCar/CardCar';
-import cars from '../../advert.json';
+import { Container, Title, Btn } from './HomePage.styled';
+import { Link } from 'react-router-dom';
+
+// import CardCar from '../../components/CardCar/CardCar';
+// import cars from '../../advert.json';
 
 const HomePage = () => {
   return (
     <Container>
-      {/* <Title>Home Page</Title> */}
-      <List>
-        {cars.map((car) => (
-          // <li key={car.id}>
-          <CardCar key={car.id} car={car}  />
-          // </li>
-        ))}
-      </List>
+      <Title>Let`s arrange an interesting trip</Title>
+      <Btn>
+        <Link to="/catalog">Let`s go</Link>
+      </Btn>
     </Container>
   );
 };

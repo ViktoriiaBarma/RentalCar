@@ -1,22 +1,63 @@
 import styled from '@emotion/styled';
+import Car from '../../assets/car.jpg';
 
-export const Container = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 100px 128px;
-`;
+// export const Container = styled.div`
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   padding: 100px 128px;
+// `;
 
 export const Title = styled.h1`
   margin: 0;
   margin-right: 10px;
+  margin-bottom: 32px;
 `;
 
-export const List = styled.ul`
-  display: flex;
-  gap: 30px;
-  padding: 8px 16px;
-  flex-wrap: wrap;
-  align-content: center;
-  align-items: center;
+export const Container = styled.div`
+  width: 100%;
+  height: 100hv;
+
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+
+  background-image: url(${Car});
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 300px;
+`;
+// export const PictureWrapper = styled.div`
+//   position: relative;
+//   width: 100%;
+//   height: 100hv;
+//   border-radius: 14px;
+//   overflow: hidden;
+//   margin-bottom: 14px;
+// `;
+
+// export const Picture = styled.img`
+//   width: 100%;
+//   height: 100hv;
+//   display: block;
+//   object-fit: cover;
+// `;
+
+export const Btn = styled.button`
+  border-radius: 12px;
+  border: 0.5px solid transparent;
+  padding: 12px 99.5px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.3;
+  font-family: inherit;
+  background-color: #3470ff;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  &:hover {
+    background-color: #0b44cd;
+  }
 `;

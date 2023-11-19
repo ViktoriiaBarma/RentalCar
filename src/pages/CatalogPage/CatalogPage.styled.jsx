@@ -2,9 +2,10 @@ import styled from '@emotion/styled';
 
 export const Container = styled.div`
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding: 100px 128px;
+  padding: 0px 128px;
 `;
 
 export const Title = styled.h1`
