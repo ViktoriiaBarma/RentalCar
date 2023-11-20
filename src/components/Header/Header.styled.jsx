@@ -7,13 +7,14 @@ export const HeaderContainer = styled.div`
 
 export const Navigation = styled.nav`
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 `;
 
 export const StyledLink = styled(Link)`
   padding: 8px 16px;
   font-weight: 500;
+  font-size: 24px;
   color: #3470ff;
   text-decoration: inherit;
   transition:

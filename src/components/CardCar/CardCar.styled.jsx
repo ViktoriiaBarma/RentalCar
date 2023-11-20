@@ -20,9 +20,10 @@ export const ListItem = styled.li`
 `;
 
 export const Btn = styled.button`
+  width: 100%;
+  padding: 12px 0px;
   border-radius: 12px;
   border: 0.5px solid transparent;
-  padding: 12px 99.5px;
   color: #fff;
   font-size: 14px;
   font-weight: 500;
@@ -41,6 +42,7 @@ export const PictureWrapper = styled.div`
   height: 268px;
   border-radius: 14px;
   overflow: hidden;
+  margin-bottom: 14px;
 `;
 
 export const Picture = styled.img`
