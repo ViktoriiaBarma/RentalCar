@@ -10,7 +10,6 @@ import Filter from '../../components/Filter/Filter';
 const CatalogPage = () => {
   const [page, setPage] = useState(1);
   const cars = useSelector(selectCars);
-  console.log(cars);
   const dispatch = useDispatch();
 
   const isEndCollection = cars.length % 12 !== 0;
