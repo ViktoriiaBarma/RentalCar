@@ -41,7 +41,6 @@ export const PictureWrapper = styled.div`
   height: 268px;
   border-radius: 14px;
   overflow: hidden;
-  margin-bottom: 14px;
 `;
 
 export const Picture = styled.img`
@@ -87,4 +86,16 @@ export const Line = styled.span`
   border-right: 1px solid #12141732;
   margin-left: 6px;
   margin-right: 6px;
+`;
+
+export const FavBtn = styled.button`
+  position: absolute;
+  padding: 0;
+  border: none;
+  top: 14px;
+  right: 14px;
+  width: 18px;
+  height: 18px;
+  background: none;
+  cursor: pointer;
 `;

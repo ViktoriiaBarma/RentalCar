@@ -13,11 +13,13 @@ export const Title = styled.h1`
   margin-right: 10px;
 `;
 
-export const List = styled.ul`
-  display: flex;
-  gap: 30px;
-  padding: 8px 16px;
-  flex-wrap: wrap;
-  align-content: center;
-  align-items: center;
-`;
+export const Btn = styled.button`background: none;
+    margin-bottom: 25px;
+    border: none;
+    text-align: center;
+    color: rgb(52, 112, 255);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    text-decoration-line: underline;
+}`;

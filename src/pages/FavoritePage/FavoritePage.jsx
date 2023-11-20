@@ -1,14 +1,15 @@
 import { Container, Title } from './FavoritePage.styled';
-import { Modal } from '../../components/Modal/Modal';
-import cars from '../../advert.json';
+import { CarsList } from '../../components/CarList/CarsList';
+import { useSelector } from 'react-redux/es/hooks/useSelector';
+import { selectFavoritesCars } from '../../redux/favorite/selectors.js';
 
 const FavoritePage = () => {
+  const favorites = useSelector(selectFavoritesCars);
+
   return (
     <Container>
-      <Title>Favorite Page</Title>
-      {cars.map((car) => (
-        <Modal key={car.id} car={car} />
-      ))}
+      {favorites.length === 0 && <Title>You don`t have favorite cars</Title>}
+      <CarsList cars={favorites} />
     </Container>
   );
 };

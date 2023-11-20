@@ -24,7 +24,16 @@ export const ModalContent = styled.div`
     rgba(0, 0, 0, 0.14) 0px 1px 1px 0px,
     rgba(0, 0, 0, 0.12) 0px 1px 3px 0px;
 `;
-
+export const Icon = styled.svg`
+  position: 'absolute',
+  stroke: 'transparent',
+  fill: '#121417',
+  top: 12,
+  right: 12,
+  width: 22,
+  height: 22,
+  cursor: 'pointer',
+`;
 export const ModalDescr = styled.ul`
   display: flex;
   flex-wrap: wrap;
@@ -34,8 +43,6 @@ export const ModalDescr = styled.ul`
 `;
 
 export const Img = styled.img`
-  width: 469px;
-  height: 248px;
   margin-bottom: 14px;
   border-radius: 14px;
 `;
@@ -99,23 +106,25 @@ export const Line = styled.span`
   margin-right: 6px;
 `;
 
-export const Btn = styled.button`
+export const Btn = styled.a`
+  width: 168px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   border-radius: 12px;
-  border: 0.5px solid transparent;
-  padding: 12px 50px;
-  color: #fff;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 20px;
-  font-family: inherit;
   background-color: #3470ff;
-  cursor: pointer;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.43;
   transition: border-color 0.25s;
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: #0b44cd;
   }
 `;
-
 export const Item = styled.li`
   font-size: 12px;
   color: #363535;

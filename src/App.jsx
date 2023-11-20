@@ -1,15 +1,18 @@
 import { Route, Routes } from 'react-router-dom';
+import { lazy } from 'react';
 import SharedLayout from './components/SharedLayout/SharedLayout';
-import HomePage from './pages/HomePage/HomePage';
-import CatalogPage from './pages/CatalogPage/CatalogPage';
-import FavoritePage from './pages/FavoritePage/FavoritePage';
+// import HomePage from './pages/HomePage/HomePage';
+// import CatalogPage from './pages/CatalogPage/CatalogPage';
+// import FavoritePage from './pages/FavoritePage/FavoritePage';
 import ErrorPage from './pages/ErrorPage/ErrorPage';
 import { AppWrapper } from './App.styled';
 
-const test = import.meta.env.VITE_API_TEST;
+
+const HomePage = lazy(() => import('./pages/HomePage/HomePage.jsx'));
+const CatalogPage = lazy(() => import('./pages/CatalogPage/CatalogPage'));
+const FavoritePage = lazy(() => import('./pages/FavoritePage/FavoritePage'));
 
 function App() {
-  console.log(test);
   return (
     <AppWrapper>
       <Routes>

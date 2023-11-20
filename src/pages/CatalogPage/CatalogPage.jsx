@@ -1,18 +1,37 @@
-import { Container, List } from './CatalogPage.styled';
-import CardCar from '../../components/CardCar/CardCar';
+import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { selectCars } from '../../redux/cars/selectors.js';
+import { fetchCars } from '../../redux/cars/operations';
+import { Container, Btn } from './CatalogPage.styled';
+import { CarsList } from '../../components/CarList/CarsList';
 import Filter from '../../components/Filter/Filter';
-import cars from '../../advert.json';
 
 const CatalogPage = () => {
+  const [page, setPage] = useState(1);
+  const cars = useSelector(selectCars);
+  console.log(cars);
+  const dispatch = useDispatch();
+
+  const isEndCollection = cars.length % 12 !== 0;
+
+  useEffect(() => {
+    dispatch(fetchCars(page));
+  }, [dispatch, page]);
+
+  const handleClickMore = () => {
+    setPage(page + 1);
+  };
+
   return (
     <Container>
       <Filter />
-      {/* <Title>Catalog Page</Title> */}
-      <List>
-        {cars.map((car) => (
-          <CardCar key={car.id} car={car} />
-        ))}
-      </List>
+      <CarsList cars={cars} />
+      {!isEndCollection && (
+        <Btn type="button" onClick={handleClickMore}>
+          Load More
+        </Btn>
+      )}
     </Container>
   );
 };

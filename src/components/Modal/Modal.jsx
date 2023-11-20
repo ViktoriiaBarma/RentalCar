@@ -13,32 +13,43 @@ import {
   Model,
   Description,
   Item,
+  Icon,
 } from './Modal.styled';
-import CrossIcon from './CrossIcon';
-
 import { useEffect } from 'react';
+import { createPortal } from 'react-dom';
+import { RxCross2 } from 'react-icons/rx';
 
-export const Modal = ({ closeModal, car }) => {
+const modalRoot = document.getElementById('modal-root');
+
+export const Modal = ({ car, onClose }) => {
   useEffect(() => {
-    const handlePressESC = (e) => {
-      if (e.code === 'Escape') closeModal();
+    const handleKeyDown = (e) => {
+      if (e.code === 'Escape') onClose();
     };
-    window.addEventListener('keydown', handlePressESC);
-    return () => window.removeEventListener('keydown', handlePressESC);
-  }, [closeModal]);
+    window.addEventListener('keydown', handleKeyDown);
+    document.body.style.overflow = 'hidden';
 
-  return (
-    <ModalBackdrop onClick={() => closeModal()}>
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+      document.body.style.overflow = 'visible';
+    };
+  }, [onClose]);
+
+  const hendleCloseModal = (e) => {
+    if (e.target === e.currentTarget) onClose();
+  };
+
+  return createPortal(
+    <ModalBackdrop onClick={hendleCloseModal}>
       <ModalContent>
-        <CrossIcon
-          style={{
-            position: 'absolute',
-            right: '16px',
-            top: '16px',
-            cursor: 'pointer',
-          }}
+        <RxCross2 style={Icon} onClick={onClose} />
+        <Img
+          src={car.img}
+          alt={car.model}
+          loading="lazy"
+          width="469"
+          height="314"
         />
-        <Img src={car.img} alt={car.model} loading="lazy" />
         <Descr>
           <Price>
             <p>
@@ -100,9 +111,10 @@ export const Modal = ({ closeModal, car }) => {
               Price: <Accent>{car.rentalPrice}</Accent>
             </Item>
           </Conditions>
-          <Btn type="submit">Rental car</Btn>
+          <Btn href="tel:+380730000000">Rental car</Btn>
         </Descr>
       </ModalContent>
-    </ModalBackdrop>
+    </ModalBackdrop>,
+    modalRoot,
   );
 };
