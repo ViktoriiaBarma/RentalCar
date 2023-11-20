@@ -6,7 +6,8 @@ export const ModalBackdrop = styled.div`
   left: 0px;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(18, 20, 23, 0.05);
+  background-color: rgba(18, 20, 23, 0.5);
+  backdrop-filter: blur(2px);
 `;
 
 export const ModalContent = styled.div`
@@ -24,16 +25,7 @@ export const ModalContent = styled.div`
     rgba(0, 0, 0, 0.14) 0px 1px 1px 0px,
     rgba(0, 0, 0, 0.12) 0px 1px 3px 0px;
 `;
-export const Icon = styled.svg`
-  position: 'absolute',
-  stroke: 'transparent',
-  fill: '#121417',
-  top: 12,
-  right: 12,
-  width: 22,
-  height: 22,
-  cursor: 'pointer',
-`;
+
 export const ModalDescr = styled.ul`
   display: flex;
   flex-wrap: wrap;

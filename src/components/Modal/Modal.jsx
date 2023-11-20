@@ -13,7 +13,6 @@ import {
   Model,
   Description,
   Item,
-  Icon,
 } from './Modal.styled';
 import { useEffect } from 'react';
 import { createPortal } from 'react-dom';
@@ -42,7 +41,19 @@ export const Modal = ({ car, onClose }) => {
   return createPortal(
     <ModalBackdrop onClick={hendleCloseModal}>
       <ModalContent>
-        <RxCross2 style={Icon} onClick={onClose} />
+        <RxCross2
+          style={{
+            position: 'absolute',
+            stroke: 'transparent',
+            fill: '#121417',
+            top: 16,
+            right: 16,
+            width: 22,
+            height: 22,
+            cursor: 'pointer',
+          }}
+          onClick={onClose}
+        />
         <Img
           src={car.img}
           alt={car.model}
